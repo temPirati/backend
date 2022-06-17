@@ -1,4 +1,5 @@
 from datetime import timedelta
+
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager, PermissionsMixin)
 from django.db import models
 
@@ -9,7 +10,6 @@ options = (
 
 
 class ITWorks(models.Model):
-
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     deleted = models.BooleanField(default=False)
@@ -51,7 +51,6 @@ class CustomAccountManager(BaseUserManager):
 
 
 class User(ITWorks, AbstractBaseUser, PermissionsMixin):
-
     username = models.CharField(max_length=150, unique=True)
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
@@ -84,10 +83,7 @@ class User(ITWorks, AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = "Users"
 
 
-
-
 class Room(ITWorks):
-
     title = models.CharField(max_length=70)
     capacity = models.IntegerField()
     description = models.TextField()
@@ -127,14 +123,6 @@ class Reservation(ITWorks):
     #         if(self.start > data['start'] and self.start < data['end'] and self.end > data['start'] and self.end < data['end']):
     #             super().save(*args, **kwargs)
 
-
-
-
 # class Room_reserve(ITWorks):
 #     room_id = models.ForeignKey(Room, on_delete=models.CASCADE)
 #     reservation_id = models.ForeignKey(Reservation, on_delete=models.CASCADE)
-
-
-
-
-
