@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'model',
     'rest_framework',
-
+    'rezerve'
 ]
 
 MIDDLEWARE = [
