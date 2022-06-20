@@ -46,9 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'models',
+    'corsheaders',
+    'model',
     'rest_framework',
-    "corsheaders",
+
 ]
 
 MIDDLEWARE = [
@@ -133,7 +134,7 @@ REST_FRAMEWORK = {
     }
 
 
-AUTH_USER_MODEL = "models.User"
+AUTH_USER_MODEL = "model.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/

@@ -56,13 +56,13 @@ class User(ITWorks, AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=150)
     last_name = models.CharField(max_length=150)
     about = models.TextField()
-    # image = models.ImageField(
+    # image = model.ImageField(
     #     verbose_name= "image",
     #     help_text="Upload a property image",
     #     upload_to="images/",
     #     default="images/default.png",
     # )
-    # alt_text = models.CharField(
+    # alt_text = model.CharField(
     #     verbose_name="Alturnative text",
     #     help_text="Please add alturnative text",
     #     max_length=255,
@@ -131,8 +131,8 @@ class Reservation(ITWorks):
 
 
 # class Room_reserve(ITWorks):
-#     room_id = models.ForeignKey(Room, on_delete=models.CASCADE)
-#     reservation_id = models.ForeignKey(Reservation, on_delete=models.CASCADE)
+#     room_id = model.ForeignKey(Room, on_delete=model.CASCADE)
+#     reservation_id = model.ForeignKey(Reservation, on_delete=model.CASCADE)
 
 
 

@@ -1,4 +1,4 @@
-from models.models import *
+from model.models import *
 from rest_framework import serializers
 from drf_extra_fields.fields import Base64ImageField
 

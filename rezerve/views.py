@@ -3,7 +3,7 @@ import pytz
 from rest_framework import generics, status
 from rest_framework.response import Response
 from .serializers import *
-from models.models import Reservation, Room, User
+from model.models import Reservation, Room, User
 
 
 class SerializerMapping:
