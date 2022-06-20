@@ -84,8 +84,6 @@ class User(ITWorks, AbstractBaseUser, PermissionsMixin):
         verbose_name_plural = "Users"
 
 
-
-
 class Room(ITWorks):
 
     title = models.CharField(max_length=70)
@@ -127,14 +125,6 @@ class Reservation(ITWorks):
     #         if(self.start > data['start'] and self.start < data['end'] and self.end > data['start'] and self.end < data['end']):
     #             super().save(*args, **kwargs)
 
-
-
-
 # class Room_reserve(ITWorks):
 #     room_id = model.ForeignKey(Room, on_delete=model.CASCADE)
-#     reservation_id = model.ForeignKey(Reservation, on_delete=model.CASCADE)
-
-
-
-
-
+#     reservation_id = model.ForeignKey(Reservation, on_delete=model.CASCADE
